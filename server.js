@@ -18,7 +18,7 @@ const io = require("socket.io")(server, {
   },
 });
 server.listen(process.env.PORT || 3000, () => {
-  console.log("listen to port: http://localhost:3000");
+  console.log("listen to port: "+server.address().port);
 });
 
 const url = "https://muabannhanh.xyz/api/";

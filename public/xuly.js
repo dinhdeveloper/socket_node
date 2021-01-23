@@ -1,4 +1,4 @@
- var socket = io('https://socket.muabannhanh.xyz/');
+ var socket = io('https://muaban-pos.herokuapp.com/');
 
 
 //var socket = ("localhost:3000", { transports: ['websocket'], allowUpgrades: false});
@@ -11,7 +11,7 @@
 
 //     });
 $(document).ready(function() {
-    const a = { id_business: '1'};
+    const a = { id_business: '2'};
    socket.emit('join-store',a);
   
 });
