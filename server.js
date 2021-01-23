@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const axios = require("axios");
 const cors = require("cors");
-// const request = require("request");
-// const { data } = require("jquery");
+const request = require("request");
+const { data } = require("jquery");
 const cron = require("node-cron");
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -17,7 +17,7 @@ const io = require("socket.io")(server, {
     origin: "*",
   },
 });
-server.listen(process.env.PORT || 56688, () => {
+server.listen(process.env.PORT || 3001, () => {
   console.log("listen to port: "+server.address().port);
 });
 
