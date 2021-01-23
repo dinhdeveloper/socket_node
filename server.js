@@ -17,8 +17,8 @@ const io = require("socket.io")(server, {
     origin: "*",
   },
 });
-server.listen(process.env.PORT || 443, () => {
-  console.log("listen to port: http://localhost:443");
+server.listen(process.env.PORT || 3000, () => {
+  console.log("listen to port: http://localhost:3000");
 });
 
 const url = "https://muabannhanh.xyz/api/";
