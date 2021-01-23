@@ -1,4 +1,4 @@
- var socket = io('https://socket.muabannhanh.xyz/',{ transports: ['websocket'], allowUpgrades: false});
+ var socket = io('https://socket.muabannhanh.xyz/');
 
 
 //var socket = ("localhost:3000", { transports: ['websocket'], allowUpgrades: false});

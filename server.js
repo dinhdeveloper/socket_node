@@ -1,9 +1,9 @@
 const express = require("express");
 const app = express();
 const axios = require("axios");
-const cors = require("cors");
-const request = require("request");
-const { data } = require("jquery");
+// const cors = require("cors");
+// const request = require("request");
+// const { data } = require("jquery");
 const cron = require("node-cron");
 app.use(express.static("public"));
 app.set("view engine", "ejs");
@@ -18,7 +18,7 @@ const io = require("socket.io")(server, {
   },
 });
 server.listen(process.env.PORT || 443, () => {
-  console.log("listen to port: " + 443);
+  console.log("listen to port: http://localhost:443");
 });
 
 const url = "https://muabannhanh.xyz/api/";
