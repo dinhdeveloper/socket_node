@@ -11,7 +11,7 @@
 
 //     });
 $(document).ready(function() {
-    const a = { id_business: '2'};
+    const a = { id_business: '1'};
    socket.emit('join-store',a);
   
 });
