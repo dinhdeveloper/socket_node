@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-var server = require("https").Server(app);
+var server = require("http").Server(app);
 const io = require('socket.io')(server, {
     pingTimeout: 43200000,
     pingInterval: 2000,
