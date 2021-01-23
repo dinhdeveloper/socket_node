@@ -17,7 +17,12 @@ const io = require('socket.io')(server, {
       origin: '*',  
     }
   });
-server.listen(process.env.PORT || 3001 );
+// server.listen(process.env.PORT || 3001,()=>{
+  
+// } );
+server.listen(443, function() {
+  console.log('Server listening on port ' + server.address().port);
+});
 
 const url = 'https://muabannhanh.xyz/api/'
 
