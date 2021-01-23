@@ -17,7 +17,7 @@ const io = require("socket.io")(server, {
     origin: "*",
   },
 });
-server.listen(process.env.PORT || 3001, () => {
+server.listen(process.env.PORT || 56688, () => {
   console.log("listen to port: "+server.address().port);
 });
 
