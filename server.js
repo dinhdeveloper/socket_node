@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const axios = require("axios");
-// const cors = require("cors");
+const cors = require("cors");
 // const request = require("request");
 // const { data } = require("jquery");
 const cron = require("node-cron");
