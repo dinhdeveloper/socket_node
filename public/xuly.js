@@ -73,10 +73,10 @@ console.log(data);
 });
 
 socket.on('disconnect', (reason) => {
-    console.log('ngat serve');
+    console.log('ngat server');
     console.log(reason);
-    if (reason === 'io server disconnect') {
-        console.log('disconnec');
+    if (reason === 'transport close') {
+        console.log('disconnect');
         socket.connect();
     }
 });
