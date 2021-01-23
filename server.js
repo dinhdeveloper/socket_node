@@ -9,7 +9,7 @@ app.use(express.static("public"));
 app.set("view engine", "ejs");
 app.set("views", "./views");
 
-var server = require("http").Server(app);
+var server = require("https").Server(app);
 const io = require('socket.io')(server, {
     pingTimeout: 43200000,
     pingInterval: 2000,
@@ -17,12 +17,9 @@ const io = require('socket.io')(server, {
       origin: '*',  
     }
   });
-// server.listen(process.env.PORT || 3001,()=>{
+server.listen(process.env.PORT || 443,()=>{
   
-// } );
-server.listen(443, function() {
-  console.log('Server listening on port ' + server.address().port);
-});
+} );
 
 const url = 'https://muabannhanh.xyz/api/'
 
