@@ -71,3 +71,15 @@ console.log(data);
 socket.on('reloaded-all-table',function(data){
 console.log(data);
 });
+
+socket.on('disconnect', (reason) => {
+    console.log('ngat serve');
+    console.log(reason);
+    if (reason === 'io server disconnect') {
+        console.log('disconnec');
+        socket.connect();
+    }
+});
+socket.on('disconnect-socket',function(data){
+    console.log('server disconnect'+ data);
+});

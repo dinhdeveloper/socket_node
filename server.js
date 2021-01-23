@@ -731,6 +731,11 @@ io.on("connection", function (socket) {
     io.in(room).emit("forced_sign_out", data);
   });
 
+  //disable
+  socket.on('disconnect', (reason) => {
+    socket.emit('disconnect-socket',reason);
+  });
+
   // setInterval(function() {
   //   var data = {message:"reloaded_timer"};
   //   console.log(data);
